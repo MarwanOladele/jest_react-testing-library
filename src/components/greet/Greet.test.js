@@ -6,3 +6,9 @@ test('Check if greet exists', () => {
   const linkElement = screen.getByText(/greet/i);
   expect(linkElement).toBeInTheDocument();
 });
+
+test('Check if greet exists and has name', () => {
+    render(<Greet name='Marwan'/>);
+    const linkElement = screen.getByText(/greet marwan/i);
+    expect(linkElement).toBeInTheDocument();
+  });
