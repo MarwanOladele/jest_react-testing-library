@@ -8,7 +8,6 @@ test('Check if greet exists', () => {
 });
 
 
-
 test('Check if greet exists and has name', () => {
     render(<Greet name='Marwan'/>);
     const linkElement = screen.getByText(/greet marwan/i);
