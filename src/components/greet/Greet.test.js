@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Greet from "./Greet";
 
 describe("Greet", () => {
-  test.skip("Check if greet exists", () => {
+  test("Check if greet exists", () => {
     render(<Greet />);
     const linkElement = screen.getByText(/greet/i);
     expect(linkElement).toBeInTheDocument();
