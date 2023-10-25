@@ -5,6 +5,9 @@ describe("Application", () => {
   test("renders correctly", () => {
     render(<Application />);
 
+    const imageElement = screen.getByAltText('a person with a laptop')
+    expect(imageElement).toBeInTheDocument()
+
     const pageHeading = screen.getByRole("heading", {
       level: 1,
     });
