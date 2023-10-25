@@ -10,6 +10,9 @@ describe("Application", () => {
     });
     expect(pageHeading).toBeInTheDocument();
 
+    const paraElement = screen.getByText("All fields are mandatory");
+    expect(paraElement).toBeInTheDocument();
+
     const sectionHeading = screen.getByRole("heading", {
       level: 2,
     });
@@ -37,9 +40,10 @@ describe("Application", () => {
     const termsElement = screen.getByRole("checkbox");
     expect(termsElement).toBeInTheDocument();
 
-    const termsElement2 = screen.getByLabelText("I agree to the terms and conditions");
+    const termsElement2 = screen.getByLabelText(
+      "I agree to the terms and conditions"
+    );
     expect(termsElement2).toBeInTheDocument();
-
 
     const submitButtonElement = screen.getByRole("button");
     expect(submitButtonElement).toBeInTheDocument();
