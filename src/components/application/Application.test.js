@@ -23,6 +23,9 @@ describe("Application", () => {
     const nameElement2 = screen.getByLabelText("Name");
     expect(nameElement2).toBeInTheDocument();
 
+    const nameElement3 = screen.getByPlaceholderText("Fullname");
+    expect(nameElement3).toBeInTheDocument();
+
     const bioElement = screen.getByRole("textbox", {
       name: "Bio",
     });
@@ -37,7 +40,7 @@ describe("Application", () => {
     const termsElement2 = screen.getByLabelText("I agree to the terms and conditions");
     expect(termsElement2).toBeInTheDocument();
 
-    
+
     const submitButtonElement = screen.getByRole("button");
     expect(submitButtonElement).toBeInTheDocument();
   });
