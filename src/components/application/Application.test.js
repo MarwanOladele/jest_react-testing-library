@@ -5,8 +5,8 @@ describe("Application", () => {
   test("renders correctly", () => {
     render(<Application />);
 
-    const imageElement = screen.getByAltText('a person with a laptop')
-    expect(imageElement).toBeInTheDocument()
+    const imageElement = screen.getByAltText("a person with a laptop");
+    expect(imageElement).toBeInTheDocument();
 
     const pageHeading = screen.getByRole("heading", {
       level: 1,
@@ -20,6 +20,9 @@ describe("Application", () => {
       level: 2,
     });
     expect(sectionHeading).toBeInTheDocument();
+
+    const closeElement = screen.getByTitle("close");
+    expect(closeElement).toBeInTheDocument();
 
     const nameElement = screen.getByRole("textbox", {
       name: "Name",
